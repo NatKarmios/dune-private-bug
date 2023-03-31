@@ -1,0 +1,10 @@
+(dirs
+ MyExe)
+
+(env
+ (opt
+  (ocamlopt_flags
+   (:standard -O3)))
+ (_
+  (flags
+   (:standard -w -70))))

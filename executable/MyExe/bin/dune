@@ -1,0 +1,4 @@
+(executable
+ (name myexe)
+ (public_name myexe)
+ (libraries mylib))

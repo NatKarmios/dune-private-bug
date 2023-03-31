@@ -1,0 +1,36 @@
+{
+  "name": "my-executable",
+  "version": "0.0.0",
+  "esy": {
+    "build": "dune build @install --promote-install-files",
+    "install": [
+      "esy-installer myexe.install"
+    ],
+    "release": {
+      "bin": [
+        "myexe"
+      ],
+      "includePackages": [
+        "root"
+      ]
+    },
+    "buildsInSource": "_build"
+  },
+  "dependencies": {
+    "@opam/dune": "^3.0",
+    "ocaml": "4.14.x",
+    "mylib": "*"
+  },
+  "devDependencies": {
+    "ocaml": "4.14.x",
+    "@opam/cmitomli": "*",
+    "@opam/fileutils": "*",
+    "@opam/utop": "*",
+    "@opam/shexp": "v0.14.0",
+    "@opam/ocaml-lsp-server": "1.12.2",
+    "@opam/ocamlfind": "*"
+  },
+  "resolutions": {
+    "mylib": "link:../library/esy.json"
+  }
+}
